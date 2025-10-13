@@ -20,6 +20,8 @@
 
 #### 1. 提出文章标题和大纲
 
+> 当然，如果你足够自信，你也可以直接跳过这一步，写好完整的内容直接从 [第三步](#3-完整稿件提交) 开始。反之如果你不确定你的推文内容是否合适，建议还是走完这个流程。
+
 你可以在 [Issue 页面](https://github.com/CompPsyUnion/2526-wechat-blogs/issues) 通过新建一个 issue 来提出你的公众号文章提议。
 
 **Issue 标题格式：** 请在标题中简明扼要地写出你的文章标题。
@@ -177,6 +179,8 @@ Please read the following carefully to understand our submission process.
 ### Detailed Instructions
 
 #### 1. Propose Article Title and Outline
+
+> Of course, if you are confident enough, you can skip this step and start from [Step 3](#3-complete-manuscript-submission) by writing the complete content directly. On the other hand, if you are unsure whether your article content is appropriate, it is recommended to follow this process.
 
 You can propose your WeChat article by creating a new issue on the [Issue Page](https://github.com/CompPsyUnion/2526-wechat-blogs/issues).
 
