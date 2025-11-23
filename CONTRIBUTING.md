@@ -65,12 +65,12 @@
 
 **审核通过：**
 
-- 我们会为这个 issue 添加上一个 `Task` 的标签（label）
+- 我们会为这个 issue 添加上一个 `Task` 的 Type，一个 `in-review` 的标签（label）
 - 我们会使用 milestone 给你排期
 - 在 issue 下方留言告知你审核通过，例如："不错，请继续完成"
 - 如果你被 assign 到了这个任务，你就可以继续进行下一步的操作了
 
-**重要提醒：** 只有你的 issue 被标注为了 `Task` 标签，你才能放心开始写完整内容（否则如果你的推文提议被拒绝，你可能面临工作白干的风险）。
+**重要提醒：** 只有你的 issue 被标注为了 `Task` 的 Type，你才能放心开始写完整内容（否则如果你的推文提议被拒绝，你可能面临工作白干的风险）。
 
 **需要修改：**
 
@@ -79,8 +79,8 @@
 
 **审核不通过：**
 
-- 我们会在 issue 下方留言并说明原因
-- 并关闭（close）这个 issue
+- 我们会在 issue 下方留言并说明原因，打上 `invalid` 标签
+- 我们会随后关闭（close）这个 issue
 
 ##### 大纲要点
 
@@ -115,9 +115,6 @@
 **Markdown 文章内容要求：**
 
 - 文章长度在 400 到 2000 字之间
-- 由于微信对外部链接限制，外部链接请直接粘贴链接，**不要使用markdown语法插入链接**
-- 避免在公式块中特殊规定颜色，*这个需求我们做不了*
-- 如需**特殊署名**，请在自己文章下方标注作者。我们最终会以`Robert(Siyuan) He`的形式呈现。
 - 文章内容要有逻辑性和连贯性，避免语法错误和拼写错误
 - 文章内容要有一定的原创性，避免大篇幅抄袭和引用。我们会使用工具来检测文章的原创性
 - **图片插入：** 使用 Markdown 语法 `![alt text](image_url)` 来插入图片
@@ -129,9 +126,12 @@
   - 示例：` ```python` 而不是仅仅 ` ``` `
   - 确保代码的正确性和可读性
 - **Markdown 语法规范：** 使用 VSCode 的 Markdownlint (DavidAnson.vscode-markdownlint) 插件检查语法
-  - **不要插入 HTML 语句**，我们微信没那么 6
-  - 如果我们发现你的 markdown 在我们这里会有报错，你会需要返工
+  - 由于微信对外部链接限制，外部链接请直接粘贴链接，**不要使用 markdown 语法插入链接**
+  - 避免在公式块中特殊规定颜色，_这个需求我们做不了_
+  - **不要插入 HTML 语句**，我们微信也没那么 6
+  - 如果我们发现你的 markdown 在我们这里会有 lint 报错，你会需要返工
   - 需要在本地格式化通过后再提交（如不会请自行上网搜索，或者看第一次周常回放）
+- 如需**特殊署名**，请在自己文章下方标注作者，或者在 Issue 中 Comment 请求。我们最终会以 `Robert(Siyuan) He` 或类似的形式呈现。
 - **参考资料：** 如果包含参考资料，请在文章末尾使用引用的方式列出，并确保版权和来源合法
 
 #### 4. 完整稿件审核
@@ -153,9 +153,28 @@
 ### 积分制度
 
 - **主动提出并完成：** 如果是你主动提出此 issue，self-assign 并最后完成，你会得到 **2 点积分**
+- **主动认领并完成：** 如果是你主动在 issue 区认领了一个已有的，没有被认领过的 issue，self-assign 并最后完成，你也可以得到 **2 点积分**
 - **提议被采纳：** 如果你只是提出了这个 issue 但是我们 assign 给别的成员完成，你也可以得到 **1 点积分**
 - **被动完成任务：** 如果开始时是我们 assign 给你一个 issue（不管是否为空），且你在最后完成，你可以得到 **1 点积分**
+- **合作完成** 如果是多人合作完成一个 issue，每人可以得到 **1 点积分**
 - **逾期未完成：** 如果你长时间没有完成 milestone 的 due date，你将面临被扣积分的风险
+
+### 关于 Issue 标签 (Labels) 和 种类 (Types)
+
+- **种类**
+  - `Task` 表示这个 issue 已经通过了标题和大纲的审核，可以开始写完整内容
+- **标签**
+  - 你可以自己添加的
+    - `blogs-software` 软件类技术推文，如开发工具或者插件的介绍等
+    - `blogs-hardware` 硬件类技术推文，如电脑硬件远离，DIY 相关等
+    - `blogs-algorithm` 算法类技术推文，如机器学习、深度学习、数据分析等
+    - `blogs-story` 历史、故事类技术推文，如计算机发展史、编程语言发展史等
+  - 由组织管理者添加的
+    - `duplicate` 表示这个 issue 是重复的，已经被关闭
+    - `invalid` 表示这个 issue 的标题和大纲审核不通过，已经被关闭
+    - `published` 表示这个 issue 的文章已经发布
+    - `in-review` 表示这个 issue 的文章正在审核中
+    - `publish-pending` 表示这个 issue 的文章正在排期发布
 
 ### 在你开始前
 
@@ -228,7 +247,7 @@ We will review your article title and outline within 3 working days.
 
 **Review Approved:**
 
-- We will add a `Task` type label to this issue
+- We will add a `Task` Type and an `in-review` label to this issue
 - We will schedule you using a milestone
 - We'll comment below the issue to inform you of approval, e.g., "Great, please continue to complete it"
 - If you're assigned to this task, you can proceed to the next step
@@ -242,8 +261,8 @@ We will review your article title and outline within 3 working days.
 
 **Review Rejected:**
 
-- We will comment below the issue explaining the reason
-- And close this issue
+- We will comment below the issue explaining the reason and add an `invalid` label
+- We will then close this issue
 
 ##### Outline Key Points
 
@@ -274,7 +293,7 @@ We will review your article title and outline within 3 working days.
    - No Chinese characters or special characters allowed
    - Example: `a_good_name_should_look_like_this.md`
    - GitHub will automatically upload and generate a link for you
-   > Note, if the image was originally a local file, please upload it to an image hosting service (like GitHub Issues' built-in image hosting) before using the link to insert it
+     > Note, if the image was originally a local file, please upload it to an image hosting service (like GitHub Issues' built-in image hosting) before using the link to insert it
 
 **Markdown Article Content Requirements:**
 
@@ -289,8 +308,11 @@ We will review your article title and outline within 3 working days.
   - Example: ` ```python` instead of just ` ``` `
   - Ensure code correctness and readability
 - **Markdown Syntax Standards:** Use VSCode's Markdownlint (DavidAnson.vscode-markdownlint) plugin to check syntax
+  - Due to WeChat's restrictions on external links, please paste external links directly into the article text — **do not use Markdown link syntax**
+  - Avoid specifying special colours or styling inside formula/math blocks — we can't support custom colours in rendered posts
   - **Do NOT insert HTML statements**, our WeChat isn't that sophisticated
-  - If we find your markdown has errors on our end, you'll need to rework it
+  - If we find your markdown has lint errors on our end, you'll need to rework it
+  - If you need a special author signature, please mark the author at the end of your article or request it in the issue comments. We will present it in a format like `Robert(Siyuan) He` or similar.
   - Rework is usually needed when auto-formatting creates ambiguity, requiring you to decide on formatting yourself
   - Format it locally and pass validation before resubmitting (if you don't know how, please search online or watch the first weekly meeting replay)
 - **References:** If including references, list them at the end of the article using citation format, ensuring copyright and sources are legitimate
@@ -317,6 +339,25 @@ We will review your complete manuscript within 3 working days. Please follow the
 - **Proposal Adopted:** If you only proposed this issue but we assigned it to another member to complete, you can still receive **1 point**
 - **Passive Task Completion:** If we initially assigned you an issue (whether empty or not) and you complete it, you can receive **1 point**
 - **Overdue Incompletion:** If you fail to complete the milestone's due date for a long time, you risk having points deducted
+- **Active claim and completion:** If you proactively claim an existing, unclaimed issue in the issue board (self-assign) and then complete it, you'll also receive **2 points**
+- **Collaborative completion:** If multiple people collaborate to finish an issue, each contributor can receive **1 point**
+
+### About Issue Types and Labels
+
+- **Types**
+  - `Task`: indicates the issue has passed title & outline review — you may start writing the full manuscript
+- **Labels**
+  - User-assignable labels (you can add these when appropriate):
+    - `blogs-software` — software/tool oriented posts
+    - `blogs-hardware` — hardware / DIY / electronics posts
+    - `blogs-algorithm` — algorithm / ML / data-science posts
+    - `blogs-story` — historical / narrative posts (history of computing, language evolution, etc.)
+  - Maintainer-controlled labels
+    - `duplicate` — this issue duplicates an existing one (will be closed)
+    - `invalid` — title & outline did not pass review (will be closed)
+    - `published` — the article from this issue has been published
+    - `in-review` — the article is currently under review
+    - `publish-pending` — the article is scheduled / pending publication
 
 ### Before You Start
 
