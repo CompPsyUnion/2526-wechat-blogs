@@ -162,10 +162,12 @@ ssh-keygen  # 快速生成SSH密钥对
 ssh -T git@github.com
 ```
 
-显示
-**"Hi username! You've successfully authenticated..."**
-表示成功
+显示 **"Hi username! You've successfully authenticated..."** 表示成功。
 
-通过以上步骤，我们完成了从生成SSH密钥对到将其配置到GitHub的全过程。使用SSH密钥进行认证，不仅摆脱了重复输入密码的繁琐，更显著提升了操作的安全性。掌握这一方法，将为您的日常开发工作带来便利。希望本指南对您有所帮助！
+通过以上步骤，我们完成了从生成SSH密钥对到将其配置到GitHub的全过程。
+
+使用SSH密钥进行认证，不仅摆脱了重复输入密码的繁琐，更显著提升了操作的安全性。掌握这一方法，将为您的日常开发工作带来便利。
+
+希望本指南对您有所帮助！
 
 作者：蓝毒
